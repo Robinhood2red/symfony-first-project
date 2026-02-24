@@ -6,11 +6,12 @@
 <style>
     .example-wrapper { margin: 2em auto; max-width: 1200px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    .button_log { border-radius: 15px; border-color: darkred; text-decoration: none; font-size: 15px;};
 </style>
 
     {% if app.user %}
         <div class="example-wrapper">
-            <h1>Vous êtes connecté en tant que {{ app.user.email }} ! ✅​<a href="{{ logout_path() }}"></h1>Se déconnecter❌</a>
+            <h1>Vous êtes connecté en tant que {{ app.user.email }} ! ✅</h1><button class="button_log"><a href="{{ logout_path() }}">Se déconnecter❌</a></button>
         </div>
     {% else %}
         <div class="example-wrapper">
